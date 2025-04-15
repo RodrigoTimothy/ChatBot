@@ -4,92 +4,96 @@ from nltk.chat.util import Chat, reflections
 pares = [
     [
         r"(oi|olá|e aí|bom dia|boa tarde|boa noite)",
-        ["Olá!", "Oi, tudo bem?", "E aí, como posso ajudar?"]
+        ["Saudações, Ashen One.", "Você está preparado para morrer... de novo?", "Bem-vindo ao Santuário do Elo de Fogo."]
     ],
     [
         r"(tchau|até mais|falou)",
-        ["Tchau!", "Até logo!", "Volte Nunca!"]
+        ["Descanse na próxima fogueira.", "Que as chamas te guiem.", "Até a próxima morte."]
     ],
     [
-        r".*(computador.*lento|PC.*rápido|notebook.*travando).*",
-        ["Você pode tentar desinstalar programas desnecessários, desativar aplicativos que iniciam com o sistema e verificar por vírus. Uma limpeza de disco também pode ajudar."]
+        r".(como.*subir.*nível|aumentar.*atributos).",
+        ["Fale com a Guardiã do Fogo no Santuário para subir de nível usando almas."]
     ],
     [
-        r".*(atualizar.*Windows|atualizações do Windows).*",
-        ["Vá em 'Configurações' > 'Atualização e Segurança' > 'Windows Update' e clique em 'Verificar atualizações'."]
+        r".(espada.*forte|melhor.*arma|build.*dano).",
+        ["A Claymore é versátil e poderosa. Mas lembre-se: a melhor arma é aquela que você domina."]
     ],
     [
-        r".*(atalho.*print|captura de tela|print no Windows).*",
-        ["Pressione a tecla PrtScn para capturar a tela toda, ou Alt + PrtScn para capturar apenas a janela ativa."]
+        r".(chegar em Anor Londo|onde fica Anor Londo).",
+        ["Você precisa derrotar o Iron Golem em Sen's Fortress e pegar a carona com os demônios alados."]
     ],
     [
-        r".*(instalar.*impressora|adicionar.*impressora|conectar.*impressora).*",
-        ["Conecte a impressora ao computador (via cabo USB ou Wi-Fi), vá em 'Dispositivos e Impressoras' e clique em 'Adicionar impressora'."]
+        r".(como.*matar.*Ornstein.*Smough|luta contra os dois).",
+        ["Tente focar em um deles primeiro. Derrotar Smough primeiro deixa Ornstein mais rápido, e vice-versa."]
     ],
     [
-        r".*(antivírus|proteger.*computador).*",
-        ["Antivírus é um programa que protege seu computador contra ameaças. Alguns bons e gratuitos são o Windows Defender, Avast e AVG."]
+        r".(o que são humanidades|como usar humanidade).",
+        ["Humanidade pode ser usada para reacender fogueiras, virar humano e invocar aliados."]
     ],
     [
-        r".*(sem internet|Wi-Fi.*parou|não consigo acessar).*",
-        ["Verifique se o roteador está ligado, se os cabos estão conectados e tente reiniciar o modem e o roteador."]
+        r".(invadir.*outros jogadores|pvp|ser invadido).",
+        ["Você precisa estar em forma humana. Use Orbes de Olho Vermelho para invadir mundos."]
     ],
     [
-        r".*(mudar|trocar|alterar).*senha.*(Wi[- ]?Fi|internet|roteador).*",
-        ["Acesse o roteador pelo navegador (geralmente em 192.168.0.1 ou 192.168.1.1), entre com usuário e senha padrão, e vá até a seção 'Wireless' ou 'Segurança'."]
+        r".(como recuperar estus|ficar sem estus).",
+        ["Descanse numa fogueira ou equipe o Anel da Madre da Reposição para ter mais cargas."]
     ],
     [
-        r".*(Wi[- ]?Fi.*conectado.*sem internet|sinal.*sem internet).*",
-        ["Pode ser um problema com a operadora, com o modem ou até uma configuração errada no roteador. Tente reiniciar os equipamentos e testar com outro dispositivo."]
+        r".(perdi minhas almas|morrer duas vezes).",
+        ["Se você morrer antes de recuperar suas almas, elas se vão para sempre. Prepare-se melhor da próxima vez."]
     ],
     [
-        r".*(acessar.*roteador|endereço IP do roteador|configurações do Wi[- ]?Fi).*",
-        ["Digite o IP do roteador na barra do navegador (geralmente 192.168.0.1), depois entre com o usuário e senha. Se não souber, tente 'admin' para ambos ou dê uma conferida na parte traseira do roteador, alguns modelos contém as credenciais."]
+        r".(difícil|muito difícil|impossível).",
+        ["Dark Souls não é difícil. Você que ainda não aprendeu a jogar... Git Gud."]
     ],
     [
-        r".*(alguém.*usando.*Wi[- ]?Fi|ver.*conectado).*internet.*",
-        ["Acesse as configurações do roteador e veja os dispositivos conectados. Se houver nomes desconhecidos, troque a senha do Wi-Fi."]
+        r".(quem é Gwyn|Senhor da Luz Solar|história do Gwyn).",
+        ["Gwyn foi o Lorde da Luz Solar que sacrificou sua alma para manter a Primeira Chama acesa."]
     ],
     [
-        r".*(limpar.*celular|apagar.*arquivos|liberar.*memória).*",
-        ["Apague fotos e vídeos duplicados, desinstale apps que não usa e limpe o cache em 'Configurações > Armazenamento'."]
+        r".(fogueiras|salvar progresso|checkpoints).",
+        ["Fogueiras servem para descansar, recuperar vida e estus, e são seus checkpoints."]
     ],
     [
-        r".*(celular.*trava|muito lento).*",
-        ["Reinicie o aparelho, feche apps em segundo plano e verifique se há atualizações do sistema."]
+        r".(quem é Artorias|história do Artorias).",
+        ["Artorias foi um dos Quatro Cavaleiros de Gwyn, corrompido pelo Abismo enquanto tentava salvá-lo."]
     ],
     [
-        r".*(modo avião|desligar conexões).*",
-        ["No Android ou iPhone, deslize a barra de cima para baixo e toque no ícone de avião. Isso desativa todas as conexões sem fio."]
+        r".(o que é a maldição|como remover maldição).",
+        ["Você pode remover a maldição com o item 'Pedra de Purificação' ou falando com um NPC como o Oswald de Carim."]
     ],
     [
-        r".*(celular.*não conecta.*Wi[- ]?Fi|Wi[- ]?Fi.*celular).*",
-        ["Tente esquecer a rede e conectar de novo, reinicie o roteador e o celular, ou verifique se a senha está correta."]
+        r".(vale a pena matar NPC|matei NPC sem querer).",
+        ["Alguns NPCs têm itens únicos e questlines importantes. Use o Perdão com Oswald de Carim se precisar."]
     ],
     [
-        r".*(transferir fotos|copiar fotos|passar fotos).*celular.*(PC|computador|notebook).*",
-        ["Conecte o celular via cabo USB, selecione 'Transferir arquivos' no celular e copie as fotos para uma pasta no computador."]
+        r".(como abrir atalho|atalho escondido|muro invisível).",
+        ["Algumas paredes falsas se abrem com um ataque. Teste em locais suspeitos."]
     ],
     [
-        r".*(criar senha segura|senha forte|senha difícil).*",
-        ["Use pelo menos 8 caracteres, misture letras maiúsculas e minúsculas, números e símbolos. Ex: S3nH@F0rt3!"]
+        r".(como fazer pacto|quais são os pactos).",
+        ["Você pode se juntar a pactos com certos NPCs. Cada pacto oferece recompensas e mecânicas únicas."]
     ],
     [
-        r".*(e-mail.*hackeado|invadido|vazado).*",
-        ["Acesse o site 'haveibeenpwned.com', digite seu e-mail e veja se ele aparece em vazamentos de dados."]
+        r".(o que é NG\+|vale a pena NG\+|novo jogo plus).",
+        ["NG+ é quando você recomeça o jogo mantendo seus equipamentos, mas os inimigos ficam mais fortes."]
     ],
     [
-        r".*(autenticação.*dois fatores|verificação.*duas etapas|autenticação dupla).*",
-        ["É uma camada extra de segurança onde, além da senha, você precisa de um código enviado por SMS ou app, como o Google Authenticator."]
+        r".(como invocar ajuda|jogar co-op).",
+        ["Você precisa estar em forma humana e ver as marcas de invocação no chão. Use a Pedra Branca de Sinal Pequeno."]
     ],
     [
-        r".*(programa.*não responde|fechar programa travado|aplicativo congelou).*",
-        ["Pressione Ctrl + Shift + Esc, vá no Gerenciador de Tarefas, selecione o programa e clique em 'Finalizar tarefa'."]
+        r".(quais anéis usar|melhor anel|anéis bons).",
+        ["O Anel de Havel aumenta a carga de equipamento. O Anel do Favor e Proteção é excelente para builds equilibradas."]
     ],
     [
-        r".*(programas essenciais|instalar.*PC novo|aplicativos básicos).*",
-        ["Navegador (Chrome, Firefox), pacote Office ou similar, leitor de PDF, um descompactador de arquivos (como WinRAR ou 7-Zip), e Minecraft."]
-    ]
+        r".(dicas para iniciantes|sou novo|por onde começar).",
+        ["Escolha uma arma que goste, não carregue mais que 70% de peso, e nunca subestime a esquiva."]
+    ],
+    [
+        r".(qual.*seu.*nome.*|como*você*chama*).",
+        ["Segredo de Estado :)"]
+    ],
 ]
 
 reflexoes_pt = {
